@@ -8,6 +8,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.navigation.compose.rememberNavController
 import com.example.data.remote.configureAppCheck
 import com.example.ui.navigation.AppNavGraph
@@ -21,6 +24,7 @@ class MainActivity : ComponentActivity() {
         configureAppCheck(this, intent)
 
         enableEdgeToEdge()
+        hideSystemBars()
 
         setContent {
             SymptoMedTheme {
@@ -33,5 +37,21 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+        if (hasFocus) {
+            hideSystemBars()
+        }
+    }
+
+    private fun hideSystemBars() {
+        val insetsController = WindowCompat.getInsetsController(window, window.decorView)
+        // Hide both navigation buttons and status bar display
+        insetsController.hide(WindowInsetsCompat.Type.systemBars())
+        // Allow transient swipe-to-reveal so users can still access navigation when needed
+        insetsController.systemBarsBehavior =
+            WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
     }
 }
