@@ -1,0 +1,217 @@
+package com.example.data.local
+
+import com.example.data.model.Medicine
+
+object MedicineCatalogueData {
+
+    fun getAllMedicines(): List<Medicine> = listOf(
+        Medicine(
+            id = "med_01",
+            medicineName = "Acetaminophen (Paracetamol)",
+            genericName = "Acetaminophen / Paracetamol",
+            drugCategory = "Analgesics & Antipyretics (Non-opioid)",
+            commonUses = "Relief of mild-to-moderate pain (headache, toothache, muscle aches, osteoarthritis) and reduction of fever.",
+            importantWarnings = "Severe liver damage may occur if maximum daily dose (4,000 mg in adults, or 2,000 mg in liver disease/chronic alcohol users) is exceeded. Check all over-the-counter cold/flu products to avoid accidental double-dosing.",
+            sideEffects = "Generally well-tolerated at therapeutic doses. Rare: nausea, allergic skin reactions, elevated liver enzymes.",
+            allergyInformation = "Contraindicated in individuals with known hypersensitivity to acetaminophen. Watch for rare serious skin reactions (Stevens-Johnson Syndrome).",
+            contraindications = "Severe acute active liver disease or known severe hepatic impairment.",
+            interactions = "Potentiates anticoagulants (warfarin) with prolonged regular use. Chronic alcohol intake drastically increases hepatotoxicity risk.",
+            prescriptionOnly = false
+        ),
+        Medicine(
+            id = "med_02",
+            medicineName = "Ibuprofen",
+            genericName = "Ibuprofen",
+            drugCategory = "Nonsteroidal Anti-inflammatory Drugs (NSAIDs)",
+            commonUses = "Relief of inflammatory pain, dysmenorrhea (menstrual cramps), dental pain, joint inflammation, and fever reduction.",
+            importantWarnings = "May increase risk of serious gastrointestinal adverse events including bleeding, ulceration, and perforation. May increase risk of cardiovascular thrombotic events, myocardial infarction, and stroke with prolonged high-dose use. Take with food or milk.",
+            sideEffects = "Dyspepsia, heartburn, nausea, abdominal pain, fluid retention, mild headache, dizziness.",
+            allergyInformation = "Contraindicated in patients who have experienced asthma, urticaria, or allergic-type reactions after taking aspirin or other NSAIDs (cross-sensitivity).",
+            contraindications = "Active peptic ulcer disease, active gastrointestinal bleeding, severe heart failure, advanced renal failure, third trimester of pregnancy.",
+            interactions = "Increases bleeding risk with anticoagulants (warfarin, apixaban) and antiplatelets (aspirin, clopidogrel). Blunts antihypertensive effects of ACE inhibitors, ARBs, and diuretics; nephrotoxicity risk with ACE inhibitors and diuretics ('triple whammy').",
+            prescriptionOnly = false
+        ),
+        Medicine(
+            id = "med_03",
+            medicineName = "Cetirizine",
+            genericName = "Cetirizine Hydrochloride",
+            drugCategory = "Second-Generation Antihistamines (H1 Antagonists)",
+            commonUses = "Relief of symptoms associated with seasonal and perennial allergic rhinitis (sneezing, rhinorrhea, nasal itching, itchy/watery eyes) and chronic urticaria (hives).",
+            importantWarnings = "Although second-generation, it may still cause mild somnolence in some individuals. Exercise caution when driving or operating machinery until individual tolerance is established.",
+            sideEffects = "Mild drowsiness, dry mouth, headache, fatigue, pharyngitis.",
+            allergyInformation = "Contraindicated in patients hypersensitive to cetirizine or hydroxyzine.",
+            contraindications = "Severe end-stage renal impairment (CrCl < 10 mL/min) unless dosage is clinically adjusted.",
+            interactions = "Additive central nervous system depression when combined with alcohol, sedatives, tranquilizers, or sleep aids.",
+            prescriptionOnly = false
+        ),
+        Medicine(
+            id = "med_04",
+            medicineName = "Loratadine",
+            genericName = "Loratadine",
+            drugCategory = "Second-Generation Non-Drowsy Antihistamines",
+            commonUses = "Management of allergic rhinitis, hay fever, and allergic skin hives with minimal central nervous system penetration.",
+            importantWarnings = "Do not exceed recommended once-daily dosage. Dose adjustment required in patients with severe hepatic or renal impairment.",
+            sideEffects = "Headache, dry mouth, mild gastrointestinal upset, fatigue (rare).",
+            allergyInformation = "Contraindicated in individuals with confirmed hypersensitivity to loratadine or desloratadine.",
+            contraindications = "Hypersensitivity to the active substance or excipients.",
+            interactions = "CYP3A4 and CYP2D6 inhibitors (ketoconazole, erythromycin) may increase plasma concentrations without significant cardiac changes.",
+            prescriptionOnly = false
+        ),
+        Medicine(
+            id = "med_05",
+            medicineName = "Diphenhydramine",
+            genericName = "Diphenhydramine Hydrochloride",
+            drugCategory = "First-Generation Antihistamines & Sedatives",
+            commonUses = "Acute relief of allergic symptoms, motion sickness, acute urticaria, and short-term management of occasional sleeplessness.",
+            importantWarnings = "Marked anticholinergic and sedative effects. Significantly impairs alertness, coordination, and reflexes. Strictly avoid driving. In elderly patients, increases risk of confusion, falls, urinary retention, and delirium (Beers Criteria).",
+            sideEffects = "Significant drowsiness, dry mouth, blurred vision, urinary retention, constipation, thickened bronchial secretions.",
+            allergyInformation = "Contraindicated in individuals with hypersensitivity to diphenhydramine.",
+            contraindications = "Narrow-angle glaucoma, symptomatic prostatic hypertrophy, bladder neck obstruction, acute asthma attack, neonates/premature infants.",
+            interactions = "Severe additive sedation with alcohol, opioids, benzodiazepines, and tricyclic antidepressants. Avoid concurrent use with MAO inhibitors.",
+            prescriptionOnly = false
+        ),
+        Medicine(
+            id = "med_06",
+            medicineName = "Omeprazole",
+            genericName = "Omeprazole",
+            drugCategory = "Proton Pump Inhibitors (PPIs)",
+            commonUses = "Short-term treatment of frequent heartburn (two or more days per week), GERD, and healing of gastric and duodenal ulcers.",
+            importantWarnings = "Take 30 to 60 minutes before the first meal of the day. OTC treatment should not exceed 14 consecutive days without consulting a doctor. Long-term continuous use may increase risk of hypomagnesemia, vitamin B12 deficiency, bone fractures, and Clostridioides difficile colitis.",
+            sideEffects = "Headache, abdominal pain, diarrhea, nausea, flatulence, constipation.",
+            allergyInformation = "Contraindicated with known allergy to omeprazole or any substituted benzimidazole (e.g., pantoprazole, esomeprazole).",
+            contraindications = "Concomitant administration with rilpivirine-containing regimens.",
+            interactions = "Reduces conversion of clopidogrel to its active antiplatelet metabolite. Decreases absorption of drugs dependent on gastric pH (ketoconazole, iron salts, atazanavir). Increases serum methotrexate levels.",
+            prescriptionOnly = false
+        ),
+        Medicine(
+            id = "med_07",
+            medicineName = "Famotidine",
+            genericName = "Famotidine",
+            drugCategory = "Histamine H2-Receptor Antagonists",
+            commonUses = "Prevention and relief of heartburn and acid indigestion associated with acid reflux and sour stomach.",
+            importantWarnings = "Can be taken 15-60 minutes before eating food or drinking beverages that cause heartburn. Dose reduction is required in patients with moderate-to-severe renal insufficiency.",
+            sideEffects = "Headache, dizziness, constipation, diarrhea, fatigue.",
+            allergyInformation = "Contraindicated in patients with a history of hypersensitivity to famotidine or other H2 blockers (ranitidine, cimetidine).",
+            contraindications = "Known hypersensitivity to H2 receptor antagonists.",
+            interactions = "Can reduce the oral bioavailability of pH-dependent drugs such as itraconazole, ketoconazole, and dasatinib.",
+            prescriptionOnly = false
+        ),
+        Medicine(
+            id = "med_08",
+            medicineName = "Dextromethorphan",
+            genericName = "Dextromethorphan Hydrobromide",
+            drugCategory = "Antitussives (Central Cough Suppressants)",
+            commonUses = "Temporary suppression of dry, non-productive cough caused by minor throat and bronchial irritation.",
+            importantWarnings = "Do not use for persistent or chronic cough (such as occurs with smoking, asthma, or emphysema) or when cough is accompanied by excessive secretions/phlegm. Do NOT use concurrently with or within 14 days of discontinuing an MAO inhibitor.",
+            sideEffects = "Dizziness, lightheadedness, mild nausea, drowsiness, gastrointestinal discomfort.",
+            allergyInformation = "Contraindicated in patients with known hypersensitivity to dextromethorphan.",
+            contraindications = "Concomitant use with Monoamine Oxidase Inhibitors (MAOIs) due to risk of fatal Serotonin Syndrome.",
+            interactions = "Risk of Serotonin Syndrome with SSRIs (fluoxetine, sertraline), SNRIs, and MAOIs. CYP2D6 inhibitors (quinidine, bupropion) dramatically increase dextromethorphan levels.",
+            prescriptionOnly = false
+        ),
+        Medicine(
+            id = "med_09",
+            medicineName = "Guaifenesin",
+            genericName = "Guaifenesin",
+            drugCategory = "Expectorants (Mucus Thinning Agents)",
+            commonUses = "Helps loosen phlegm and thin bronchial secretions to rid the bronchial passageways of bothersome mucus and make coughs more productive.",
+            importantWarnings = "Must be taken with a full glass of water. Adequate hydration is critical to support the expectorant mechanism.",
+            sideEffects = "Nausea, vomiting, stomach upset, dizziness, headache.",
+            allergyInformation = "Contraindicated in patients with known hypersensitivity to guaifenesin.",
+            contraindications = "Known hypersensitivity to guaifenesin or product formulations.",
+            interactions = "No clinically significant drug-drug interactions documented. Safe with most standard cold therapies.",
+            prescriptionOnly = false
+        ),
+        Medicine(
+            id = "med_10",
+            medicineName = "Pseudoephedrine",
+            genericName = "Pseudoephedrine Hydrochloride",
+            drugCategory = "Systemic Sympathomimetic Decongestants",
+            commonUses = "Temporary relief of sinus congestion, eustachian tube pressure, and nasal congestion due to the common cold or hay fever.",
+            importantWarnings = "Stimulates alpha and beta-adrenergic receptors. Causes vasoconstriction and cardiac stimulation. May elevate blood pressure, heart rate, and intraocular pressure. Strictly avoid in uncontrolled hypertension or ischemic heart disease.",
+            sideEffects = "Nervousness, restlessness, insomnia, tachycardia, palpitations, tremor, elevated blood pressure.",
+            allergyInformation = "Contraindicated in individuals hypersensitive to pseudoephedrine or other sympathomimetic amines.",
+            contraindications = "Severe or uncontrolled hypertension, severe coronary artery disease, narrow-angle glaucoma, within 14 days of MAOI therapy.",
+            interactions = "Severe hypertensive crisis risk with MAOIs. May diminish effectiveness of antihypertensive agents (beta blockers, methyldopa, reserpine).",
+            prescriptionOnly = false
+        ),
+        Medicine(
+            id = "med_11",
+            medicineName = "Loperamide",
+            genericName = "Loperamide Hydrochloride",
+            drugCategory = "Antimotility Agents (Peripheral Opioid Agonists)",
+            commonUses = "Control and symptomatic relief of acute non-specific diarrhea and chronic diarrhea associated with inflammatory bowel disease.",
+            importantWarnings = "BLACK BOX WARNING: Higher than recommended doses can cause serious cardiac adverse events, including QT prolongation, Torsades de Pointes, cardiac arrest, and sudden death. Do NOT exceed 8 mg per day for OTC use. Drink plenty of clear fluids with electrolytes to prevent dehydration.",
+            sideEffects = "Constipation, abdominal cramps, nausea, dry mouth, dizziness, drowsiness.",
+            allergyInformation = "Contraindicated in patients with known hypersensitivity to loperamide.",
+            contraindications = "Bacterial enterocolitis caused by invasive organisms (Salmonella, Shigella, Campylobacter), pseudomembranous colitis associated with broad-spectrum antibiotics, acute dysentery characterized by blood in stools and high fever.",
+            interactions = "P-glycoprotein and CYP3A4 inhibitors (quinidine, ritonavir, ketoconazole) increase loperamide levels and cardiac risk.",
+            prescriptionOnly = false
+        ),
+        Medicine(
+            id = "med_12",
+            medicineName = "Bismuth Subsalicylate",
+            genericName = "Bismuth Subsalicylate",
+            drugCategory = "Antidiarrheal & Gastrointestinal Protectants",
+            commonUses = "Relief of traveler's diarrhea, upset stomach, indigestion, nausea, and heartburn.",
+            importantWarnings = "Contains salicylate. Children and teenagers who have or are recovering from viral infections (chickenpox, influenza) should NOT use this product due to the risk of Reye's Syndrome. May cause temporary, harmless darkening of the tongue and black stools.",
+            sideEffects = "Darkening of tongue, black stools, mild constipation, tinnitus (if salicylate toxicity occurs).",
+            allergyInformation = "Contraindicated in patients allergic to aspirin or other salicylates.",
+            contraindications = "Aspirin allergy, active ulcer disease, bleeding disorders, pediatric patients with viral illnesses.",
+            interactions = "Decreases oral absorption of tetracycline antibiotics (binds with bismuth). Increases anticoagulant and antiplatelet effect of warfarin and aspirin.",
+            prescriptionOnly = false
+        ),
+        Medicine(
+            id = "med_13",
+            medicineName = "Oral Rehydration Salts (ORS)",
+            genericName = "Oral Electrolyte Maintenance Solution (WHO Formula)",
+            drugCategory = "Fluid & Electrolyte Replenishers",
+            commonUses = "Prevention and treatment of dehydration caused by acute diarrhea, gastroenteritis, excessive vomiting, or heat exhaustion.",
+            importantWarnings = "Mix with the exact volume of clean drinking water specified on the packet; incorrect dilution can cause hypernatremia or ineffective rehydration. Sip slowly in frequent small amounts rather than gulping.",
+            sideEffects = "Rare when reconstituted properly. Mild nausea or vomiting if consumed too rapidly.",
+            allergyInformation = "No known contraindications on allergic basis. Verify suitability in patients with severe glucose malabsorption.",
+            contraindications = "Intractable severe vomiting, hemodynamic shock, acute intestinal obstruction, severe acute renal failure.",
+            interactions = "None significant; safe alongside most oral medications once vomiting is controlled.",
+            prescriptionOnly = false
+        ),
+        Medicine(
+            id = "med_14",
+            medicineName = "Hydrocortisone 1% Topical Cream",
+            genericName = "Hydrocortisone",
+            drugCategory = "Low-Potency Topical Corticosteroids",
+            commonUses = "Temporary relief of itching associated with minor skin irritations, inflammation, rashes due to eczema, insect bites, poison ivy, soaps, or detergents.",
+            importantWarnings = "For external topical use only. Do not apply near eyes or on open, weeping wounds. Do not use for more than 7 consecutive days without consulting a physician. Avoid occlusive dressings unless directed by a dermatologist.",
+            sideEffects = "Local skin burning, irritation, dryness, folliculitis, hypertrichosis, skin atrophy with prolonged excessive use.",
+            allergyInformation = "Contraindicated in patients with history of hypersensitivity to hydrocortisone or corticosteroid excipients.",
+            contraindications = "Untreated primary bacterial, viral (herpes simplex, varicella), or fungal skin infections without concurrent antimicrobial therapy.",
+            interactions = "Minimal systemic absorption with short-term, localized 1% application.",
+            prescriptionOnly = false
+        ),
+        Medicine(
+            id = "med_15",
+            medicineName = "Clotrimazole 1% Cream",
+            genericName = "Clotrimazole",
+            drugCategory = "Broad-Spectrum Imidazole Antifungals",
+            commonUses = "Topical treatment of cutaneous candidiasis, tinea corporis (ringworm), tinea cruris (jock itch), and tinea pedis (athlete's foot).",
+            importantWarnings = "For external skin use only. Not for ophthalmic use. Continue full recommended duration (usually 2 to 4 weeks) even if symptoms improve early to prevent fungal recurrence.",
+            sideEffects = "Localized erythema, stinging, blistering, peeling, pruritus, general skin irritation.",
+            allergyInformation = "Contraindicated in individuals hypersensitive to clotrimazole or other imidazole antifungals.",
+            contraindications = "Known hypersensitivity to clotrimazole or vehicle ingredients.",
+            interactions = "No clinically significant topical interactions reported.",
+            prescriptionOnly = false
+        ),
+        Medicine(
+            id = "med_16",
+            medicineName = "Salbutamol (Albuterol) Inhaler",
+            genericName = "Salbutamol / Albuterol Sulfate",
+            drugCategory = "Short-Acting Beta-2 Adrenergic Agonists (SABA)",
+            commonUses = "Educational monograph: Rapid relief of acute bronchospasm in reversible obstructive airway disease (asthma, COPD) and prevention of exercise-induced bronchospasm.",
+            importantWarnings = "Educational information only. Prescription-only medicine. SABA overuse (using more than 2-3 canisters per year) is associated with increased risk of severe asthma exacerbations and mortality. Requires physician management with inhaled corticosteroids.",
+            sideEffects = "Fine skeletal muscle tremor (especially hands), tachycardia, palpitations, nervousness, headache, peripheral vasodilation.",
+            allergyInformation = "Contraindicated in patients with hypersensitivity to albuterol sulfate or fluorocarbon propellants.",
+            contraindications = "Hypersensitivity to salbutamol. Do not use for threatened abortion.",
+            interactions = "Non-selective beta blockers (propranolol) directly antagonize bronchodilation and may precipitate severe bronchospasm. Increased risk of hypokalemia with loop diuretics or corticosteroids.",
+            prescriptionOnly = true
+        )
+    )
+}
